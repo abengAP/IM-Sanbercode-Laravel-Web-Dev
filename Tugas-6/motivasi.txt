@@ -1,0 +1,1 @@
+motivasi saya mengikuti bootcamp laravel ini adalah untuk menunjang saya dalam bekerja saat ini yang mana perusahaan saya mengharuskan saya mempelajari framework laravel, yang mana basic saya sebelumnya menggunakan framework CI3. semoga dengan mengikuti bootcamp ini bisa menambah ilmu saya untuk bekerja. terimakasih SanberCode :)
