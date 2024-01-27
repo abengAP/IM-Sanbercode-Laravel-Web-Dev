@@ -1,0 +1,43 @@
+---JAWABAN NO 1---
+create database myshop
+
+
+---JAWABAN NO 2---
+### create table users ###
+create table users (id int AUTO_INCREMENT, name varchar(255), email varchar(255), password varchar(255), PRIMARY KEY(id))
+
+### create table categories ###
+create table categories (id int AUTO_INCREMENT, name varchar(255), PRIMARY KEY(id))
+
+### create table items ###
+create table items (id int PRIMARY KEY AUTO_INCREMENT, name varchar(255), description varchar(255), price int, stock int, category_id int, FOREIGN KEY (category_id) REFERENCES categories (id))
+
+---JAWABAN NO 3---
+### Insert User ###
+INSERT INTO users (name, email, password) VALUES ("John Doe", "john@doe.com","john123"), ("Jane Doe", "jane@doe.com", "jenita123")
+
+### Insert Categories ###
+INSERT INTO categories (name) VALUES ("gadget"), ("cloth"), ("men"), ("women"), ("branded")
+
+### Insert items ###
+INSERT INTO items (name, description, price, stock, category_id) VALUES ("Sumsang", "hape keren dari merk sumsang", 4000000, 100, 1), ("Uniklooh", "baju keren dari brand ternama", 500000, 50, 2), ("IMHO Watch", "jam tangan anak yang jujur banget", 2000000, 10, 1)
+
+---JAWABAN NO 4---
+--A--
+SELECT name, email FROM users
+
+--B--
+--data items yang memiliki harga > 1000000--
+SELECT * FROM items WHERE price > 1000000
+
+--data items yang memiliki name mirip (like) dengan “uniklo”, “watch”, atau “sang”--
+ SELECT * FROM items WHERE name LIKE "uniklo%"
+
+--C--
+SELECT items.name, items.description, items.price, items.stock, items.category_id, categories.name as kategori FROM items INNER JOIN categories on items.category_id = categories.id
+
+
+---JAWABAN NO 5---
+UPDATE items set price=2500000 where name="sumsang b50"
+
+
