@@ -28,16 +28,3 @@ Route::get('/data-tables', function(){
     return view('pages.data');
 });
 
-// Route::get('/cast', function(){
-//     return view('pages.cast.list');
-// });
-
-
-
-Route::get('/cast/create', [CastController::class, 'create']);
-
-Route::post('/cast', [CastController::class, 'store']);
-
-Route::get('/cast', [CastController::class, 'index']);
-
-Route::get('/cast/{cast_id}', [CastController::class, 'show']);
